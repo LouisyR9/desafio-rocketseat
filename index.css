@@ -1,0 +1,31 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 125%;
+    color: whitesmoke;
+    background-color:black;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8rem;
+    min-height: 200vh;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    
+}
+
+img {
+    width: 650px;
+    height: 390px;
+    border-radius: 50%;
+}
+.center {
+
+    text-align: center;
+
+}
+
+.texto{
+    text-align: center;
+    visibility:var(background-attachment);
+}
