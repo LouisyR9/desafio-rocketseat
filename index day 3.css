@@ -1,0 +1,91 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+html {
+    font-size: 80%;
+}
+
+body{
+    background-color: black;
+}
+.text{
+    min-height: 100vh;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.toggle{
+    display: flex;
+    align-items: center;
+}
+.toggle .description{
+    margin-left: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    font-size: 1.8rem;
+    color: rgb(201, 201, 201);
+}
+.slider{
+    position: relative;
+    background-color:rgb(139, 139, 139);
+    width: 80px;
+    height: 40px;
+    border: 10px solid: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.button{
+    background-color: rgb(177, 29, 29);
+    border: none;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    pointer-events: none;
+    top: 5px;
+    left: 5px;
+    position: absolute;
+    transition: all 450ms ease-in-out;
+}
+
+.toggle-input:checked ~ .slider > .button {
+    background: #006400;
+    left: 46px;
+
+}
+.toggle-input {
+    display: none;
+}
+
+.toggle-label > .slider::after{
+    position: absolute;
+    top: 50%;
+    right: 0.6rem;
+    transform: translate(0,-50%);
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    color: rgb(66, 65, 65);
+    font-weight: bold;
+    z-index: 1;
+    transition: all 300ms ease-in-out;
+    content: "OFF";
+}
+.toggle-label > .toggle-input:checked ~ .slider{
+    background-color:rgb(161, 161, 161);
+    box-shadow: inset 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.2)
+    0 0 1rem rgba(50, 0, 150, 0.2);
+}
+.toggle-label > .toggle-input:checked ~ .slider::after{
+    right: 3rem;
+    color: rgb(66, 65, 65);
+    content: "ON";
+
+}
+
+
+
+
+
