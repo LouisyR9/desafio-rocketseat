@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+}
+.fundo{
+    background-color: rgb(20, 9, 83);
+    height: 100vh;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8rem;
+    min-height: 200vh;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-position: center;
+}
+.calculadora{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.85);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 15px;
+    padding: 15px;
+
+}
+.txtcalculadora{
+    font-size: 25px;
+}
+.botão1{
+    background-color: rgb(44, 44, 44);
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    cursor: pointer;
+    border: none;
+    color: #fff;
+    margin: 3px;
+}
+.botão2{
+    background-color: rgb(97, 97, 97);
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    cursor: pointer;
+    border: none;
+    color: #fff;
+    margin: 3px;
+}
+.botão3{
+    background-color: rgb(68, 67, 67);
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    cursor: pointer;
+    border: none;
+    color: #fff;
+    margin: 3px;
+}
+.botão4{
+    background-color: rgb(50, 141, 111);
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    cursor: pointer;
+    border: none;
+    color: #fff;
+    margin: 3px;
+}
+.botão1:hover{
+    background-color: rgb(92, 7, 54);
+}
+.botão2:hover{
+    background-color: rgb(37, 37, 37);
+}
+.botão3:hover{
+    background-color: rgb(20, 20, 20);
+}
+.botão4:hover{
+    background-color: rgb(67, 136, 136);
+}
+#resultado{
+    width: 207px;
+    background-color: rgb(181, 128, 230);
+    height: 23px;
+    margin: 5px;
+    font-size: 22px;
+    color: black;
+    text-align: right;
+    padding: 8.5px;
+}
+    </style>
+
+</head>
+   <body>
+    <div class="fundo">
+        <h1>
+            Day 4 Desafio Rocketseat</h1>
+            <div class="calculadora">
+                <h1 class="txtcalculadora">CALCULADORA</h1>
+                <P id="resultado">resultado</P>
+                <table>
+                    <tr>
+                        <td><button class="botão1" onclick="insert('C')">C</button></td>
+                        <td><button class="botão2" onclick="insert('<')"><</button></td>
+                        <td><button class="botão2" onclick="insert('/')">/</button></td>
+                        <td><button class="botão2" onclick="insert('x')">x</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="botão3" onclick="insert('7')">7</button></td>
+                        <td><button class="botão3" onclick="insert('8')">8</button></td>
+                        <td><button class="botão3" onclick="insert('9')">9</button></td>
+                        <td><button class="botão2" onclick="insert('-')">-</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="botão3" onclick="insert('4')">4</button></td>
+                        <td><button class="botão3" onclick="insert('5')">5</button></td>
+                        <td><button class="botão3" onclick="insert('6')">6</button></td>
+                        <td><button class="botão2" onclick="insert('+')">+</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="botão3" onclick="insert('1')">1</button></td>
+                        <td><button class="botão3" onclick="insert('2')">2</button></td>
+                        <td><button class="botão3" onclick="insert('3')">3</button></td>
+                        <td rowspan="2"><button class="botão4" style="height: 106px;">=</button></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><button class="botão3" style="width: 106px;" onclick="insert('0')">0</button></td>
+                        <td><button class="botão3">.</button></td>
+                    </tr>
+                </table>
+            </div>
+    </div>
+    <script>
+        function insert(num)
+        {
+document.getElementById('resultado').innerHTML = num;
+        }
+    </script>
+   </body>
+</html>
+
+
+
